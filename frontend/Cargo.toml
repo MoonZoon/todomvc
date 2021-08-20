@@ -3,7 +3,7 @@ version = "0.1.0"
 name = "frontend"
 repository = "https://github.com/MoonZoon/MoonZoon"
 authors = ["Martin Kavík <martin@kavik.cz>"]
-description = "MoonZoon demo"
+description = "TodoMVC - MoonZoon example"
 categories = ["MoonZoon", "example"]
 license = "MIT"
 readme = "../README.md"
@@ -12,11 +12,13 @@ edition = "2018"
 [lib]
 crate-type = ["cdylib"]
 
+[dev-dependencies]
+wasm-bindgen-test = "0.3.19"
+
 [dependencies]
 zoon = { git = "https://github.com/MoonZoon/MoonZoon", rev = "457b8d1" }
-rand = { version = "0.8.3", features = ["small_rng", "getrandom"], default-features = false }
-getrandom = { version = "0.2", features = ["js"], default-features = false }
+strum = { version = "0.21.0",  features = ["derive"], default-features = false }
+uuid = { version = "0.8.2", features = ["wasm-bindgen", "v4"], default-features = false }
 
 [package.metadata.wasm-pack.profile.release]
-wasm-opt = ['-Oz']
-
+wasm-opt = ['-Os']

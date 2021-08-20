@@ -1,8 +1,8 @@
-# MoonZoon demo
+# MoonZoon TodoMVC
 
 > [MoonZoon](http://moonzoon.rs/) is a Rust Fullstack Framework.
 
-**[Live demo](https://moonzoon-demo.herokuapp.com/)**
+**[Live demo](https://moonzoon-todomvc.herokuapp.com/)**
 
 ## Run on a local machine
 
